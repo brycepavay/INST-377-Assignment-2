@@ -12,12 +12,12 @@ function findMatches(wordToMatch, restaraunt) {
     });
 }
 function range(int) {
-    const arr = [];
-    for (let i = 0; i < int; i += 1) {
-      arr.push(i);
-    }
-    return arr;
+  const arr = [];
+  for (let i = 0; i < int; i += 1) {
+    arr.push(i);
   }
+  return arr;
+}
 function numberWithCommas(x) {
     return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
 }
@@ -59,4 +59,3 @@ searchInput.addEventListener('input', (displayMatches) => {
 const suggestions = document.querySelector('.suggestions');
 searchInput.addEventListener('keyup', displayMatches);
 
-window.onload = displayMatches;
