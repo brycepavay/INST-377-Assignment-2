@@ -38,10 +38,18 @@ function displayMatches() {
     }).join('');
     suggestions.innerHTML = html;
 }
+function change(evt, list) {
+    const block = document.querySelector('catchme');
+    block.innerText = list;
+}
 
 const searchInput = document.querySelector('.search');
-const suggestions = document.querySelector('.suggestions');
+searchInput.addEventListener('input', (displayMatches) => {
 
-searchInput.addEventListener('input', displayMatches);
-    searchInput.addEventListener('keyup', displayMatches);
+        const list = range(10);
+        document.addEventListener('input', (event) => {change(event, list) });
+});
+
+const suggestions = document.querySelector('.suggestions');
+searchInput.addEventListener('keyup', displayMatches);
 
