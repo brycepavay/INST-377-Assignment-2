@@ -59,3 +59,4 @@ searchInput.addEventListener('input', (displayMatches) => {
 const suggestions = document.querySelector('.suggestions');
 searchInput.addEventListener('keyup', displayMatches);
 
+window.onload = displayMatches;
