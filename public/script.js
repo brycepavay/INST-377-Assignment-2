@@ -45,6 +45,7 @@ function displayMatches() {
     suggestions.innerHTML = html;
 }
 function change(evt, list) {
+    console.log(evt.value);
     const block = document.querySelector('catchme');
     block.innerText = list;
 }
